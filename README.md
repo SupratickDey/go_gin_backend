@@ -5,6 +5,7 @@
 * Framework: **gin-gonic**
 * Authentication: **JWT**
 * Database: **PostgreSQL**
+* ORM: **gorm**
 * Go Version: **1.16**
 
 ## Setup process
