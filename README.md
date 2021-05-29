@@ -29,7 +29,7 @@ go run server.go
 
 ## Quick Start
 * Go inside of root directory
-* Run this command `docker-compose up -d`
+* Run this command `docker-compose -f docker-compose.postgres.yml up -d`
 
 
 ## Environments
