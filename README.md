@@ -4,9 +4,9 @@
 
 
 ## Setup process
-* Create an *_.env_* file in the root directory
+* Create an **_.env_** file in the root directory
 * Add the following key and values
-  * PORT=ANY_PORT_VALUE (Eg: *4000*)
+  * PORT=ANY_PORT_VALUE (Eg: **4000**)
   * DB_CONFIG=POSTGRES_CONNECTION_STRING
 
 
