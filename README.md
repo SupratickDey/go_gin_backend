@@ -2,10 +2,10 @@
 
 ## The setup for go gin-gonic backend server
 
-* Framework: gin-gonic
-* Authentication: JWT
-* Database: PostgreSQL
-* Go Version: 1.16
+* Framework: **gin-gonic**
+* Authentication: **JWT**
+* Database: **PostgreSQL**
+* Go Version: **1.16**
 
 ## Setup process
 * Create an **_.env_** file in the root directory
