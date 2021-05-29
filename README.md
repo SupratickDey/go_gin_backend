@@ -21,9 +21,19 @@ go run server.go
 ```
 
 
+*command to start server using docker-compose*
+```
+docker-compose up
+```
+
+*command to start server using docker-compose in detach mode*
+```
+docker-compose up -d
+```
 
 
-## Requirements to spin up PostgreSQL:
+
+## Requirements to run PostgreSQL server:
 * docker >= 17.12.0+
 * docker-compose
 
