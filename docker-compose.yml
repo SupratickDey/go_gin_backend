@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  bacnkend_api:
+    container_name: go_gin_backend
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      TZ: Asia/Kolkata
+      appname: go_gin_backend
+      PORT: 4000
+      DB_CONFIG: ${DB_CONFIG}
