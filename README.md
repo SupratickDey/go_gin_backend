@@ -12,7 +12,7 @@
 * Create an **_.env_** file in the root directory
 * Add the following key and values
   * `PORT`=ANY_PORT_VALUE (Eg: **4000**)
-  * `DB_CONFIG`=POSTGRES_CONNECTION_STRING
+  * `DB_CONFIG`=POSTGRES_CONNECTION_STRING (Eg: "postgres://username:password@host:post/database_name?sslmode=disable")
   * `ELASTIC_APM_SERVICE_NAME`=APM_SERVICE_NAME (can be left empty)
   * `ELASTIC_APM_SERVER_URL`=APM_SERVER_URL (Eg: http://localhost:8200)
   * `ELASTIC_APM_SECRET_TOKEN`=APM_SERVER_TOKEN (use the token from apm server, Eg: xxVpmQB2HMzCL9PgBHVrnxjNXXw5J7bd79DFm6sjBJR5HPXDhcF8MSb3vv4bpg44)
