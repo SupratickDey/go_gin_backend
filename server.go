@@ -6,6 +6,7 @@ import (
 	"github.com/SupratickDey/go_gin_backend/lib/middlewares"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
+	"go.elastic.co/apm/module/apmgin"
 	"log"
 	"os"
 )
@@ -22,6 +23,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	app := gin.Default() // create gin app
+	app.Use(apmgin.Middleware(app)) //use apm gin
 	app.Use(database.Inject(db))
 	app.Use(middlewares.JWTMiddleware())
 	api.ApplyRoutes(app) // apply api router

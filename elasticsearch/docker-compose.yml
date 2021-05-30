@@ -28,8 +28,27 @@ services:
     image: docker.elastic.co/apm/apm-server:7.13.0
     ports:
       - 8200:8200
-    volumes:
-      - ./apm.yml:/usr/share/apm/config/apm.yml
+    command: >
+      apm-server -e
+        -E setup.template.settings.index.number_of_replicas=0
+        -E monitoring.enabled=true
+        -E apm-server.expvar.enabled=true
+        -E apm-server.ilm.enabled=false
+        -E apm-server.instrumentation.enabled=true
+        -E output.elasticsearch.hosts=['http://elasticsearch:9200']
+        -E output.elasticsearch.username="elastic"
+        -E output.elasticsearch.password="PleaseChangeMe@1!"
+    environment: 
+    -  output.elasticsearch.hosts=['http://elasticsearch:9200']
+    -  output.elasticsearch.username="elastic"
+    -  output.elasticsearch.password="PleaseChangeMe@1!"
+    -  apm-server.host="0.0.0.0:8200"
+    -  apm-server.secret_token="xxVpmQB2HMzCL9PgBHVrnxjNXXw5J7bd79DFm6sjBJR5HPXDhcF8MSb3vv4bpg44"
+    -  setup.kibana.host="kibana:5601"
+    -  setup.kibana.password="elastic"
+    -  setup.kibana.host="PleaseChangeMe@1!"
+    -  setup.template.enabled=true
+    -  logging.to_files=false
     depends_on:
       - elasticsearch
       - kibana
